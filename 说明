@@ -1,0 +1,12 @@
+创建一个项目
+$ django-admin startproject mysite
+
+进入mystie项目的根目录，输入下面的命令启动开发服务器：
+$ python manage.py runserver
+$ python manage.py runserver 8080 默认是
+
+在项目下创建一个app项目
+$ python manage.py startapp polls
+
+创建数据库表
+$ python manage.py migrate
