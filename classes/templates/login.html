@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请登录</title>
+    <link rel="stylesheet" href="/static/common.css"/>
+</head>
+<body>
+    <form action="/classes/login", method="POST">
+        <p>输入用户名：</p>
+        <input  type="text" name="user">
+        <p>输入用密码：</p>
+        <input  type="text" name="pwd">
+        <p><input type="submit" name="提交"></p>
+        <p>{{ msg }}</p>
+        <p>{{ user.0 }}</p>
+        {% for u in user %}
+            <p>{{ u }}</p>
+        {% endfor %}
+    </form>
+</body>
+</html>

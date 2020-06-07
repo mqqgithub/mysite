@@ -1,0 +1,7 @@
+几种方式：
+1、
+path(r'index/', views.index)
+2
+re_path(r'^index$', views.index),  # 访问地址中不要在加上‘/’,会自动加上
+3
+re_path(r'^index/(\w+).html$', views.index, name='index'),  # 伪静态

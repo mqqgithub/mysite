@@ -14,8 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-# from cmdb import views
+from django.urls import path, include, re_path
+from django.shortcuts import HttpResponse
+
+
+def default(request):
+    return HttpResponse('默认页面')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +28,6 @@ urlpatterns = [
     path(r'cmdb/', include('cmdb.urls')),
     # 注意写法和1.0不同
     path(r'blog/', include(('blog.urls', 'blog'), namespace='blog')),
+    path(r'classes/', include(('classes.urls', 'classes'), namespace='classes')),
+    re_path(r'^', default),  # 没有路由到，返回默认页面
 ]
