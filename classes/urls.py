@@ -8,4 +8,8 @@ urlpatterns = [
     # re_path(r'^index$', views.index),  # 访问地址中不要在加上‘/’,会自动加上
     re_path(r'^index$', views.index, name='index'),  # 伪静态
     re_path(r'^login$', views.login, name='login'),
+    re_path(r'^user$', views.user, name='user'),
+    re_path(r'^del_user/', views.del_user, name='del_user'),
+    re_path(r'^add_user/', views.add_user, name='add_user'),
+
 ]

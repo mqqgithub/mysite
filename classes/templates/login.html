@@ -8,10 +8,10 @@
 <body>
     <form action="/classes/login", method="POST">
         <p>输入用户名：</p>
-        <input  type="text" name="user">
+        <input  type="text" name="user" />
         <p>输入用密码：</p>
-        <input  type="text" name="pwd">
-        <p><input type="submit" name="提交"></p>
+        <input  type="text" name="pwd" />
+        <p><input type="submit" name="提交" /></p>
         <p>{{ msg }}</p>
         <p>{{ user.0 }}</p>
         {% for u in user %}

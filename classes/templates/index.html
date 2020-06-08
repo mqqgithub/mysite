@@ -6,16 +6,7 @@
     <link rel="stylesheet" href="/static/common.css">
 </head>
 <body>
-    <p>登录成功</p>
-    <p>用户列表</p>
-    <table>
-        {% for user in user_list %}
-            <tr>
-                <td>{{ user.nid }}</td>
-                <td>{{ user.username }}</td>
-                <td>{{ user.password }}</td>
-            </tr>
-        {% endfor %}
-    </table>
+    <p>{{ user }}，{{ msg }}</p>
+
 </body>
 </html>
