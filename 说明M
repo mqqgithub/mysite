@@ -1,0 +1,8 @@
+
+
+
+
+
+如果已经存在数据表，执行以下命令
+python .\manage.py inspectdb
+python manage.py inspectdb > models.py
