@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+</head>
+<body>
+    <form method="POST" action="/classes/edit_user/">
+        <input name="nid" style="display: none" value="{{ nid }}"/>
+        <p>用户名</p>
+        <input type="text", name="username" value="{{ username }}"/>
+        <p>密码</p>
+        <input type="text", name="password" value="{{ password}}"/>
+        <p></p>
+        <input type="submit", value="修改"/>
+
+    </form>
+</body>
+</html>

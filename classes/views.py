@@ -64,4 +64,19 @@ def add_user(request):
         return render(request, 'add_user.html')
 
 
+def edit_user(request):
+    if request.method == 'GET':
+        user_id = request.GET.get('nid')
+        user_name = UserInfo.objects.filter(nid=user_id).values('username')[0]['username']
+        password = UserInfo.objects.filter(nid=user_id).values('password')[0]['password']
+        return render(request, 'edit_user.html', {"nid": user_id, "username": user_name, 'password': password})
+    if request.method == 'POST':
+        user_id = request.POST.get("nid")
+        user_name = request.POST.get("username")
+        print(user_name)
+        password = request.POST.get("password")
+        UserInfo.objects.filter(nid=user_id).update(username=user_name, password=password)
+        return redirect('/classes/user')
+
+
 
