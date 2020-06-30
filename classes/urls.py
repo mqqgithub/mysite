@@ -12,5 +12,6 @@ urlpatterns = [
     re_path(r'^del_user/', views.del_user, name='del_user'),
     re_path(r'^add_user/', views.add_user, name='add_user'),
     re_path(r'^edit_user/', views.edit_user, name='edit_name'),
+    re_path(r'^layout/', views.layout, name='layout'),
 
 ]

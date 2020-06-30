@@ -2,9 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>测试各种功能标签</title>
 </head>
 <body>
-$END$
+    <b>加粗</b><br>
+    <i>斜体</i><br>
+    <u>下划线</u><br>
+    <s>删除</s><hr><br>
+    <p>p段落标签</p>
+
+    <h1>标题1</h1>
+    <h2>标题2</h2>
+    <h3>标题3</h3>
+    <h4>标题4</h4>
+    <h5>标题5</h5>
+    <h6>标题6</h6><hr>
+
+    <img src="图片的路径" alt="图片未加载成功时的提示" title="鼠标悬浮时提示信息" width="宽" height="高(宽高两个属性只用一个会自动等比缩放)">
+
+    <p></p>
+    <a href="http://www.oldboyedu.com" target="_blank" >点我</a>
+
+    <p>无序列表</p>
+    <ul type="disc">
+        <li>第一项</li>
+        <li>第二项</li>
+    </ul>
+
+    <p>有序列表</p>
+    <ol type="1" start="2">
+        <li>第一项</li>
+        <li>第二项</li>
+    </ol>
+
+    <p>标题列表</p>
+    <dl>
+        <dt>标题1</dt>
+        <dd>内容1</dd>
+        <dt>标题2</dt>
+        <dd>内容1</dd>
+        <dd>内容2</dd>
+    </dl>
+
+    <p>表格</p>
+    <table border='1'>
+      <thead> #标题部分
+      <tr> #一行
+        <th>序号</th> #一个单元格
+        <th>姓名</th>
+        <th>爱好</th>
+      </tr>
+      </thead>
+      <tbody> #内容部分
+      <tr> #一行
+        <td>1</td> #一个单元格
+        <td>Egon</td>
+        <td>杠娘</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Yuan</td>
+        <td>日天</td>
+      </tr>
+      </tbody>
+    </table>
+    <p>selected标签</p>
+    <form action="" method="post">
+      <select name="city" id="city">
+        <option value="1">北京</option>
+        <option selected="selected" value="2">上海</option> #默认选中，当属性和值相同时，可以简写一个selected就行了
+        <option value="3">广州</option>
+        <option value="4">深圳</option>
+      </select>
+        <p>label标签</p>
+        <label for="username">用户名</label>  #for和input的id属性一样，就关联在一起了
+        <br>
+        <input type="text" id="username" name="username">
+    </form>
+
+
+
+
+
+
+
 </body>
 </html>

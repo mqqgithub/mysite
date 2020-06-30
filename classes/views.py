@@ -79,6 +79,8 @@ def edit_user(request):
         return redirect('/classes/user')
 
 
+def layout(request):
+    return render(request, 'layout.html')
 
 
 
