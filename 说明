@@ -1,3 +1,5 @@
+豆瓣下载比较快
+pip install django==1.11.7 -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 创建一个项目
 $ django-admin startproject mysite
 
