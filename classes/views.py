@@ -16,7 +16,7 @@ def index(request, name):
     # UserInfo.objects.create(username='', password='')
     # UserInfo.objects.get(id=123)
     print('name', name)
-    return render(request, 'index.html', {'msg': '请登录！', 'user': '陌生人'})
+    return render(request, 'classes/templates/classes/index.html', {'msg': '请登录！', 'user': '陌生人'})
 
 
 def login(request):
@@ -36,9 +36,9 @@ def login(request):
         if p == pwd:
             # return redirect('https://www.tmall.com/')
             # return redirect('/classes/index')
-            return render(request, 'index.html', {'msg': '登录成功！', 'user': u})
+            return render(request, 'classes/index.html', {'msg': '登录成功！', 'user': u})
         else:
-            return render(request, 'index.html', {'msg': '登录失败！'})
+            return render(request, 'classes/index.html', {'msg': '登录失败！'})
 
 
 def user(request):

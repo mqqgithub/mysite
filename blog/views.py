@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from blog import models
 def index(request):
     articles = models.Article.objects.all()
-    return render(request, 'blog/index.html', {'articles': articles})
+    return render(request, 'blog/templates/blog/index.html', {'articles': articles})
 
 def article_page(request, article_id):
     article = models.Article.objects.get(pk=article_id)
@@ -23,11 +23,11 @@ def edit_action(request):
     if article_id == '0':
         models.Article.objects.create(title=title, content=content)
         articles = models.Article.objects.all()
-        return render(request, 'blog/index.html', {'articles': articles})
+        return render(request, 'blog/templates/blog/index.html', {'articles': articles})
     else:
         article = models.Article.objects.get(pk=article_id)
         article.title = title
         article.content = content
         article.save()
         articles = models.Article.objects.all()
-        return render(request, 'blog/index.html', {'articles': articles})
+        return render(request, 'blog/templates/blog/index.html', {'articles': articles})
