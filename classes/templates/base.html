@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <style>
+        body{
+            margin: 0;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .pg-header{
+            background: #1B6AAA;
+            height: 48px;
+            min-width: 1190px;
+            line-height: 48px;
+        }
+        .pg-header .logo{
+            color: white;
+            font-size: 25px;
+            width: 200px;
+            text-align: center;
+        }
+        .pg-header .rmenus a{
+            color: white;
+            display: inline-block;
+            padding: 0 15px;
+        }
+        .pg-header .rmenus a:hover{
+            background-color: #1b6d85;
+        }
+        .pg-header .avatar{
+            padding: 0 20px;
+        }
+        .pg-header .avatar .user-info a{
+            display: block;
+
+        }
+        .pg-header .avatar:hover .user-info{
+            display: block;
+        }
+        .pg-header .avatar img{
+            border-radius: 50%;
+        }
+        .pg-header .avatar .user-info{
+            display: none;
+            position: absolute;width: 200px;top: 48px;right: 2px;z-index: 100
+        }
+        .menus{
+            width: 200px;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            bottom: 0;
+            border: 1px solid #1B6AAA;
+        }
+        .content{
+            min-width: 990px;
+            position: absolute;
+            top: 48px;
+            left: 200px;
+            bottom: 0;
+            right: 0;
+            overflow: scroll;
+            z-index: 99;
+        }
+        .pg-body .menus a{
+            display: block;
+            padding: 10px 5px;
+            border-bottom: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="pg-header">
+        <div class="logo left">后台管理系统</div>
+        <div class="avatar right" style="position: relative;">
+            <img style="height: 40px;width: 40px" src="/static/images/timg.jpg">
+            <div class="user-info">
+                <a>资料</a>
+                <a>退出</a>
+            </div>
+
+        </div>
+        <div class="rmenus right">
+            <a>消息</a>
+            <a>邮件</a>
+        </div>
+
+    </div>
+    <div class="pg-body">
+        <div class="menus" >
+            <a>班级管理</a>
+            <a>老师管理</a>
+            <a>课程管理</a>
+        </div>
+    </div>
+
+    <div class="content">内容
+    </div>
+
+</body>
+</html>

@@ -83,4 +83,7 @@ def layout(request):
     return render(request, 'layout.html')
 
 
+def base(request):
+    return render(request, 'base.html')
+
 
