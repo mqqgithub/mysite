@@ -14,4 +14,8 @@ $ python manage.py startapp polls
 $ python manage.py makemigrations  生成配置文件在migrations中
 $ python manage.py migrate   根据配置文件生成表
 
+创建超级用户管理admin
+python manage.py createsuperuser
+admin/123456
+
 
