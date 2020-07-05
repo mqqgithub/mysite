@@ -1,21 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.css"/>
-    <title>新增用户</title>
-    <hr>
-    <br>
-</head>
-<body>
-    <form method="post" action="/classes/add_user/">
-        <P>输入用户名</P>
-        <input type="text" name="user" />
-        <p>输入密码</p>
-        <input type="text" name="pwd" />
-        <P></P>
-        <input type="submit" value="提交" />
-    </form>
 
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+    <title>新增用户</title>
+{% endblock %}
+
+{% block css %}
+    <style>
+
+    </style>
+{% endblock %}
+
+{% block xx %}
+    <div style="width:100%;text-align:center">
+        <form method="post" action="/classes/add_user/">
+            <span>输入用户名</span><input type="text" name="user" />
+            <P></P>
+            <span>输入密码</span><input type="text" name="pwd" />
+            <P></P>
+            <input type="submit" value="提交" />
+        </form>
+    </div>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
